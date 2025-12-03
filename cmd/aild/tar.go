@@ -42,7 +42,8 @@ func extractTarToDir(tarData []byte, dst string) error {
 
 			f, err := os.OpenFile(target, os.O_CREATE|os.O_WRONLY|os.O_TRUNC, os.FileMode(header.Mode))
 			if err != nil {
-				return fmt.Errorf("failed to create file %s: %w", target, err)
+				continue
+				// return fmt.Errorf("failed to create file %s: %w", target, err)
 			}
 
 			if _, err := io.Copy(f, tr); err != nil {
