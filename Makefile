@@ -15,11 +15,7 @@ LDFLAGS=-ldflags "-X main.version=$(VERSION) -X main.commit=$(COMMIT) -X main.bu
 # Output binary
 OUTPUT=$(BUILD_DIR)/$(BINARY_NAME)
 
-# Docker image settings
-DOCKER_IMAGE?=aild
-DOCKER_TAG?=latest
-
-.PHONY: all build clean test install uninstall run fmt vet lint help docker-build docker-run deps tidy
+.PHONY: all build clean help
 
 # Default target
 all: clean build
