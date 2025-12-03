@@ -37,12 +37,6 @@ clean:
 	@$(GO) clean
 	@echo "Clean complete"
 
-## test: Run tests
-test:
-	@echo "Running tests..."
-	$(GO) test -v -race -coverprofile=coverage.out ./...
-	@echo "Tests complete"
-
 ## help: Show this help message
 help:
 	@echo "Usage: make [target]"
